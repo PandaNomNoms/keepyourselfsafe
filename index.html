@@ -8,22 +8,18 @@
     		<div class="blurb">
         		<h1>Days Since Last Told to KYS</h1>
 			<script language="text/javascript">
-				function daysSince() {
-				debugger;
-				// The number of milliseconds in one day
 				var ONE_DAY = 1000 * 60 * 60 * 24;
-
-				// Convert both dates to milliseconds
-				var dateTold = new Date(2017,09,21).getTime();
+				var dateTold = new Date(2017,09-1,21).getTime();
 				var currentDate = new Date().getTime();
-
-				// Calculate the difference in milliseconds
 				var difference_ms = Math.abs(currentDate - dateTold);
-
-				// Convert back to days and return
-				return Math.round(difference_ms/ONE_DAY);
+				var daysDiff = Math.floor(difference_ms/ONE_DAY);
+				if (daysDiff != 1) {
+					var dayString = " days";
 				}
-				document.getElementById("daysSinceLast").innerHTML = daysSince();
+				else {
+					var dayString = " day";
+				}
+				document.getElementById("daysSinceLast").innerHTML = daysDiff + dayString;
 			</script>
 			<p id = "daysSinceLast"></p>
     		</div><!-- /.blurb -->

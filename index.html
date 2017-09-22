@@ -7,27 +7,25 @@
 		<div class="container">
     		<div class="blurb">
         		<h1>Days Since Last Told to KYS</h1>
-				    <p id = "daysSinceLast"></p>
+			<script language="JavaScript">
+				function daysSince() {
+				// The number of milliseconds in one day
+				var ONE_DAY = 1000 * 60 * 60 * 24;
+
+				// Convert both dates to milliseconds
+				var dateTold = new Date(2017,09,21).getTime();
+				var currentDate = new Date().getTime();
+
+				// Calculate the difference in milliseconds
+				var difference_ms = Math.abs(currentDate - dateTold);
+
+				// Convert back to days and return
+				document.getElementByID('daysSinceLast').innerHTML = Math.round(difference_ms/ONE_DAY);
+				}
+			</script>
+			<p id = "daysSinceLast"></p>
     		</div><!-- /.blurb -->
 		</div><!-- /.container -->
-		<script language="JavaScript">
-		function daysSince() {
-    			// The number of milliseconds in one day
-			var ONE_DAY = 1000 * 60 * 60 * 24;
-
-    			// Convert both dates to milliseconds
-		    	var dateTold = new Date(2017,09,21).getTime();
-		    	var currentDate = new Date().getTime();
-
-		    	// Calculate the difference in milliseconds
-		    	var difference_ms = Math.abs(currentDate - dateTold);
-
-		    	// Convert back to days and return
-		    	document.getElementByID('daysSinceLast').innerHTML = Math.round(difference_ms/ONE_DAY);
-		}
-		</script>
-
-		<input id="first" value="1/1/2000"/>
-		<input id="second" value="1/1/2001"/>
+		
 	</body>
 </html>

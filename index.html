@@ -4,22 +4,25 @@
 		<title>KYS Tracker</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	<body background="background.jpg">
-        		<h1>Days Since Last Told to KYS</h1>
-			<p id = "daysSinceLast"></p>
-			<script>
-				var ONE_DAY = 1000 * 60 * 60 * 24;
-				var dateTold = new Date(2017,09-1,24).getTime();
-				var currentDate = new Date().getTime();
-				var difference_ms = Math.abs(currentDate - dateTold);
-				var daysDiff = Math.floor(difference_ms/ONE_DAY);
-				if (daysDiff != 1) {
-					var dayString = " days";
-				}
-				else {
-					var dayString = " day";
-				}
-				document.getElementById("daysSinceLast").innerHTML = daysDiff + dayString;
-			</script>	
+	<body>
+		<div id="background">
+    			<img src="img.jpg" class="stretch" alt="" />
+		</div>
+        	<h1>Days Since Last Told to KYS</h1>
+		<p id = "daysSinceLast"></p>
+		<script>
+			var ONE_DAY = 1000 * 60 * 60 * 24;
+			var dateTold = new Date(2017,09-1,24).getTime();
+			var currentDate = new Date().getTime();
+			var difference_ms = Math.abs(currentDate - dateTold);
+			var daysDiff = Math.floor(difference_ms/ONE_DAY);
+			if (daysDiff != 1) {
+				var dayString = " days";
+			}
+			else {
+				var dayString = " day";
+			}
+			document.getElementById("daysSinceLast").innerHTML = daysDiff + dayString;
+		</script>	
 	</body>
 </html>

@@ -5,13 +5,27 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<style> 
 			body {
-			    background: url("background.jpg");
-			    background-size: cover;
+				background: url("background.jpg");
+				background-size: cover;
+			}
+			h1 {
+				text-align: center;
+				display:inline;
+				background-color: rgba(0,0,0,.5);
+				color:#fff;
+				font-family: "Trebuchet MS", Helvetica, sans-serif;
+			}
+			p {
+				text-align: center;
+				display:inline;
+				background-color: rgba(0,0,0,.5);
+				color:#fff;
+				font-family: "Trebuchet MS", Helvetica, sans-serif;
 			}
 		</style>
 	</head>
 	<body>
-        	<h1>Days Since Last Told to KYS</h1>
+        	<h1> Days Since Last Told to KYS </h1>
 		<p id = "daysSinceLast"></p>
 		<script>
 			var ONE_DAY = 1000 * 60 * 60 * 24;
@@ -25,7 +39,7 @@
 			else {
 				var dayString = " day";
 			}
-			document.getElementById("daysSinceLast").innerHTML = daysDiff + dayString;
+			document.getElementById("daysSinceLast").innerHTML = " " + daysDiff + dayString + " ";
 		</script>	
 	</body>
 </html>

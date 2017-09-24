@@ -10,14 +10,16 @@
 			}
 			h1 {
 				text-align: center;
-				display:inline;
+			}
+			h1 span {
 				background-color: rgba(0,0,0,.5);
 				color:#fff;
 				font-family: "Trebuchet MS", Helvetica, sans-serif;
 			}
 			p {
 				text-align: center;
-				display:inline;
+			}
+			p span {
 				background-color: rgba(0,0,0,.5);
 				color:#fff;
 				font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -25,8 +27,8 @@
 		</style>
 	</head>
 	<body>
-        	<h1> Days Since Last Told to KYS </h1>
-		<p id = "daysSinceLast"></p>
+		<h1><span>Days Since Last Told to KYS</span></h1>
+		<p><span id = "daysSinceLast"></span></p>
 		<script>
 			var ONE_DAY = 1000 * 60 * 60 * 24;
 			var dateTold = new Date(2017,09-1,24).getTime();
